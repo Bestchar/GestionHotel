@@ -3,6 +3,7 @@ package Vu;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.format.TextStyle;
 import javax.swing.*;
 import javaswingdev.drawer.Drawer;
 import javaswingdev.drawer.DrawerController;
@@ -24,7 +25,7 @@ public class Menu extends javax.swing.JFrame {
 
         drawer = Drawer.newDrawer(this)
                 .header(new Header())
-                .background(Color.PINK)
+                .background(Color.WHITE)
                 .drawerBackground(Color.WHITE)
                 .space(5)
                 .enableScroll(true)
@@ -57,7 +58,8 @@ public class Menu extends javax.swing.JFrame {
                         .icon(new ImageIcon(getClass().getResource("/Icon/close.png")))
                         // .textColor(Color.RED)
                         .font(new Font("Serif", Font.BOLD, 18))
-                        .build())
+                        .build())        //jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vu/photo.jpg")));
+
                 .event(new EventDrawer() {
                     @Override
                     public void selected(int i, DrawerItem di) {
@@ -75,7 +77,7 @@ public class Menu extends javax.swing.JFrame {
                 .build();
 
         JPanel contentPanel = new JPanel(new BorderLayout());
-        bout1 = new javax.swing.JButton("|||");
+        bout1 = new javax.swing.JButton("CLIQUE");
         bout1.setBackground(new java.awt.Color(255, 153, 153));
         bout1.setOpaque(true);
         bout1.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +86,9 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         contentPanel.add(bout1, BorderLayout.NORTH);
+        contentPanel.add(jLabel3, BorderLayout.CENTER);
         setContentPane(contentPanel);
+       
     }
 
     @SuppressWarnings("unchecked")
@@ -165,7 +169,7 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(kGradientPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 0, 900, 34));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vu/photo.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 1030, 470));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 1030, 470));
 
         pack();
         setLocationRelativeTo(null);
@@ -181,19 +185,25 @@ public class Menu extends javax.swing.JFrame {
     private void showClientInterface() {
         Client clientInterface = new Client();
         clientInterface.setVisible(true);
-        this.dispose();
+        Menu.this.dispose();
     }
 
     private void showChambresInterface() {
         Chambres chambresInterface = new Chambres();
         chambresInterface.setVisible(true);
-        this.dispose();
+        Menu.this.dispose();
     }
 
     private void showReservationInterface() {
         Reservation reservationInterface = new Reservation();
         reservationInterface.setVisible(true);
-        this.dispose();
+        Menu.this.dispose();
+        
+    }
+    public void showServices(){
+        Services service=new Services();
+        service.setVisible(true);
+        Menu.this.dispose();
     }
 
     public static void main(String args[]) {

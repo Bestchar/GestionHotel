@@ -8,9 +8,13 @@ package Vu;
  *
  * @author charles_4545
  */
-class pren {
+class jTable1 {
 
-    static String getText() {
+    static Object getValueAt(int selectedRow, int idColumnIndex) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    static int getSelectedRow() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     

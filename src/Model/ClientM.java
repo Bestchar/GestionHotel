@@ -1,5 +1,7 @@
 package Model;
 
+import java.sql.PreparedStatement;
+
 public class ClientM {
 
     private String nom;
@@ -7,17 +9,30 @@ public class ClientM {
     private String Nationalite;
     private int Telephone;
     private String Categorie;
+    private String Photo;
 
     public ClientM() {
-
+      
     }
 
-    public ClientM(String nom, String Prenom, String Nationalite, int Telephone) {
+    public String getPhoto() {
+        return Photo;
+    }
+
+    public void setPhoto(String Photo) {
+        this.Photo = Photo;
+    }
+
+    
+
+    public ClientM(String nom, String Prenom, String Nationalite, int Telephone,String Photo) {
         this.nom = nom;
         this.Prenom = Prenom;
         this.Nationalite = Nationalite;
         this.Telephone = Telephone;
         this.Categorie = Categorie;
+          this.Photo = Photo;
+        
     }
 
     public String getNom() {
@@ -58,6 +73,22 @@ public class ClientM {
 
     public void setCategorie(String Categorie) {
         this.Categorie = Categorie;
+    }
+
+    public Object getId_client() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public PreparedStatement prepareStatement(String sql) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Object getPhotoInputStream() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Object getPhotoPath() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     

@@ -13,8 +13,8 @@ public class Connect {
             System.out.println("DRIVER OK ! ");
 
             String url = "jdbc:mysql://localhost:3306/Gestion_Hotel";
-            String user = "Charles";
-            String passwd = "Charles.4545";
+            String user = "root";
+            String passwd = "";
 
             // Assigner la connexion à la variable conn
            conn = DriverManager.getConnection(url, user, passwd);

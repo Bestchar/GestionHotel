@@ -19,74 +19,10 @@ public class Reservation extends javax.swing.JFrame {
 
     public Reservation() {
         initComponents();
-        initDrawer();
+        
         setTitle(RESEVATION);
-    }
- private void initDrawer() {
-        drawer = Drawer.newDrawer(this)
-                .header(new Header())
-                .background(Color.PINK)
-                .drawerBackground(Color.WHITE)
-                .space(5)
-                .enableScroll(true)
-                .addChild(new DrawerItem("CLIENT")
-                        .icon(new ImageIcon(getClass().getResource("/Icon/client(1).png")))
-                        .font(new Font("Serif", Font.BOLD, 18))
-                        .build())
-                .addChild(new DrawerItem("CHAMBRES")
-                        .icon(new ImageIcon(getClass().getResource("/Icon/bed.png")))
-                        .font(new Font("Serif", Font.BOLD, 18))
-                        .build())
-                .addChild(new DrawerItem("RÉSERVATION")
-                        .icon(new ImageIcon(getClass().getResource("/Icon/reservation.png")))
-                        .font(new Font("Serif", Font.BOLD, 18))
-                        .build())
-                .addChild(new DrawerItem("NOS SERVICES")
-                        .icon(new ImageIcon(getClass().getResource("/Icon/leisure.png")))
-                        .font(new Font("Serif", Font.BOLD, 18))
-                        .build())
-                .addChild(new DrawerItem("FACTURE")
-                        .icon(new ImageIcon(getClass().getResource("/Icon/receipt.png")))
-                        .font(new Font("Serif", Font.BOLD, 18))
-                        .build())
-                .addFooter(new DrawerItem("FERMER")
-                        .icon(new ImageIcon(getClass().getResource("/Icon/close.png")))
-                        .font(new Font("Serif", Font.BOLD, 18))
-                        .build())
-                .event(new EventDrawer() {
-                    @Override
-                    public void selected(int i, DrawerItem di) {
-                        switch (i) {
-                            case 0: // CLIENT
-                                showClientInterface();
-                                break;
-                            case 1: // CHAMBRES
-                                showChambresInterface();
-                                break;
-                            case 2: // RÉSERVATION
-                                showReservationInterface();
-                                break;
-                            // Ajoutez d'autres cas si nécessaire
-                        }
-                    }
-
-                    private void showReservationInterface() {
-                        // Implémentez la logique pour afficher l'interface de réservation
-                    }
-                })
-                .build();
-    }
-
-    private void showChambresInterface() {
-        Chambres chambresInterface = new Chambres();
-        chambresInterface.setVisible(true);
-        this.dispose();
-    }
-
-    private void showClientInterface() {
-        Client clientInterface = new Client();
-        clientInterface.setVisible(true);
-        this.dispose();
+    
+ 
     }
                         @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -346,11 +282,9 @@ public class Reservation extends javax.swing.JFrame {
 
     private void BOUT3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOUT3ActionPerformed
 
-        if (drawer.isShow()) {
-            drawer.hide();
-        } else {
-            drawer.show();
-        }
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        Reservation.this.dispose();
     }//GEN-LAST:event_BOUT3ActionPerformed
     
     
@@ -403,7 +337,10 @@ public class Reservation extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
             public void dispose() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                 Menu menu = new Menu();
+        menu.setVisible(true);
+        Reservation.this.dispose();
+                
             }
 
                
