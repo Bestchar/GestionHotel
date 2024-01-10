@@ -13,5 +13,6 @@ public class Chambre {
     private String tp_Chambre;
     private String Caracteristique;
     private String Situation;
+    private String Type;
     
 }
