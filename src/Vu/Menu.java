@@ -58,8 +58,7 @@ public class Menu extends javax.swing.JFrame {
                         .icon(new ImageIcon(getClass().getResource("/Icon/close.png")))
                         // .textColor(Color.RED)
                         .font(new Font("Serif", Font.BOLD, 18))
-                        .build())        //jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vu/photo.jpg")));
-
+                        .build())      
                 .event(new EventDrawer() {
                     @Override
                     public void selected(int i, DrawerItem di) {
